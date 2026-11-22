@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Login</title>
+</head>
 
+<body class="bg-body-tertiary">
+  <main class="container min-vh-100 d-flex align-items-center py-4">
+    <div class="row justify-content-center w-100">
+      <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card border-0 shadow">
+          <div class="card-body p-4">
+            <h1 class="h4 fw-bold text-center mb-1">Login</h1>
+            <p class="text-center text-body-secondary small mb-4">Acesse sua conta para continuar.</p>
+            <div id="alerta" class="alert alert-danger d-none" role="alert"></div>
+
+            <form id="form-login" novalidate>
+              <div class="mb-3">
+                <div class="input-group has-validation">
+                  <span class="input-group-text" aria-hidden="true">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail"
+                           autocomplete="username">
+                    <label for="email">E-mail</label>
+                  </div>
+                </div>
+                <div class="text-danger small mt-1" data-erro-for="email"></div>
+              </div>
+
+              <div class="mb-3">
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha"
+                         autocomplete="current-password">
+                  <label for="senha">Senha</label>
+                </div>
+                <div class="text-danger small mt-1" data-erro-for="senha"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100" id="btn-entrar">Entrar</button>
+
+              <div class="text-center mt-3">
+                <a href="#" class="link-primary small text-decoration-none">Não tem conta? Criar conta</a>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="./js/validation.js"></script>
+
+</body>
+</html>
